@@ -5,11 +5,13 @@ export default defineConfig({
     server: {
       entry: "server",
     },
-    prerender: {
+
+    spa: {
       enabled: true,
-      crawlLinks: true,
-      autoStaticPathsDiscovery: true,
-      autoSubfolderIndex: true,
+      prerender: {
+        outputPath: "/index.html",
+        crawlLinks: false,
+      },
     },
   },
 
